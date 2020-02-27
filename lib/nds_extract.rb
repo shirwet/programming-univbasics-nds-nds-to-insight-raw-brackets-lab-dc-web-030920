@@ -18,24 +18,18 @@ def directors_totals(nds)
   #
   #
   # Be sure to return the result at the end!
+  nds = directors_database
   result = {}
-  nds= directors_database
-directors_totals= 0
-movies_ar_index = 0
-while movies_ar_index < nds.length do 
-  column_index = 0
-  
-  while column_index < nds[movies_ar_index].length do
-    inner_len = nds[column_index].length
-    inner_index = 0
-    while inner_index < inner_len do
-      
-      directors_totals += nds[movies_ar_index][column_index][inner_index][:worldwide_gross]
-     inner_index += 1
-    end
-    column_index += 1
-  end
-  movies_ar_index += 1
-end 
-p directors_totals
+   director = 0
+   while director < nds.length do
+     movie = 0
+     total = 0
+     while movie < nds[director][:movies].length do
+       total += nds[director][:movies][movie][:worldwide_gross]
+       movie += 1
+     end
+     result[nds[director][:name]] = total
+     director += 1
+   end
+ return result
 end
