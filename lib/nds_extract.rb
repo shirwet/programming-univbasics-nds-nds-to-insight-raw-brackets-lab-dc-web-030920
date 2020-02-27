@@ -30,6 +30,6 @@ while movies_ar_index < nds.length do
     inner_index = 0
     while inner_index < inner_len do
       
-      directors_totals += nds[movies_ar_index]
+      directors_totals += nds[movies_ar_index][column_index][inner_index][:price]
 
 end
