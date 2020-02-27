@@ -25,6 +25,9 @@ movies_ar_index = 0
 while movies_ar_index < nds.count do 
   column_index = 0
   
-  
+  while column_index < vm[row_index].length do
+    inner_len = vm[row_index][column_index].length
+    inner_index = 0
+    while inner_index < inner_len do
 
 end
