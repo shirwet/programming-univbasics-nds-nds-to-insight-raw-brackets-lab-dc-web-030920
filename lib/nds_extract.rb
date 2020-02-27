@@ -25,5 +25,6 @@ movies_ar_index = 0
 while movies_ar_index < nds.count do 
   column_index = 0
   
+  
 
 end
