@@ -31,6 +31,11 @@ while movies_ar_index < nds.length do
     while inner_index < inner_len do
       
       directors_totals += nds[movies_ar_index][column_index][inner_index][:worldwide_gross]
-      
-
+     inner_index += 1
+    end
+    column_index += 1
+  end
+  movies_ar_index += 1
+end 
+p directors_totals
 end
